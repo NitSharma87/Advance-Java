@@ -1,0 +1,92 @@
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Hotel Booking System</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    width:700px;
+    margin:50px auto;
+    background:#fff;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+
+h1{
+    text-align:center;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    margin:10px 0;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+    background:#007bff;
+    padding:10px 20px;
+    display:block;
+    border-radius:5px;
+}
+
+a:hover{
+    background:#0056b3;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Online Hotel Booking System</h1>
+
+<hr>
+
+<ul>
+
+<li><a href="<%=request.getContextPath()%>/ctl/UserListCtl">User Management</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/HotelListCtl">Hotel Management</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/RoomListCtl">Room Management</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/BookingListCtl">Booking Management</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/MyBookingListCtl">My Bookings</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/PaymentListCtl">Payment</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/ReviewListCtl">Reviews & Ratings</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/ProfileCtl">My Profile</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/ChangePasswordCtl">Change Password</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/LoginCtl">Login</a></li>
+
+<li><a href="<%=request.getContextPath()%>/ctl/LogoutCtl">Logout</a></li>
+
+</ul>
+
+</div>
+
+</body>
+</html>
+

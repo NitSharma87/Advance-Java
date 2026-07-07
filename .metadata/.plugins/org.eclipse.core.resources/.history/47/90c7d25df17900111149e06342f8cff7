@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%@ include file ="Header.jsp" %>
+	<h1>Login Here</h1>
+	<form action="/LoginCtl" method="post">
+		<table>
+			<tr>
+				<th>User Name</th>
+				<td><input type="text" name="login"
+					placeholder="Enter Your UserName"></td>
+			</tr>
+
+			<tr>
+				<th>Password</th>
+				<td><input type="password" name="password"
+					placeholder="Enter Your Password"></td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<td><input type="submit" value="Login"></td>
+			</tr>
+
+
+
+		</table>
+
+
+
+
+	</form>
+	<%@ include file ="Footer.jsp" %>
+</body>
+</html>

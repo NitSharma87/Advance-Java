@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add User</title>
+<style>
+.center {
+	text-align: center;
+}
+
+table {
+	margin: auto;
+}
+</style>
+</head>
+<body>
+<%@include file="Header.jsp"%>
+	<div class="center">
+		<h1>Add User</h1>
+		<form action="UserServlet" method="post">
+			<table class="center">
+
+
+				<tr>
+					<th>FirstName:</th>
+					<td><input type="text" name="firstName"
+						placeholder="Enter Your First Name"></td>
+				</tr>
+				<tr>
+					<th>LastName:</th>
+					<td><input type="text" name="lastName"
+						placeholder="Enter Your Last Name"></td>
+				</tr>
+				<tr>
+					<th>Login:</th>
+					<td><input type="text" name="userName"
+						placeholder="Enter Your User Name"></td>
+				</tr>
+				<tr>
+					<th>Password:</th>
+					<td><input type="password" name="password"
+						placeholder="Enter Your Password"></td>
+				</tr>
+				<tr>
+					<th>DOB:</th>
+					<td><input type="Date" name="dob" placeholder="Enter Your DOB"></td>
+				</tr>
+				<tr>
+					<th>Address:</th>
+					<td><input type="text" name="address"
+						placeholder="Enter Your Address"></td>
+				</tr>
+				<tr>
+					<th>Gender:</th>
+					<td>Male <input type="radio" name="gender" value="male">&nbsp; Female
+					 <input type="radio" name="gender" value="female"></td>
+				</tr>
+				
+				<tr class="btn btn primary mt-3">
+					<th></th>
+					<td><input type="submit"></td>
+				</tr>
+
+
+			</table>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+package com.rays.ctl;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+
+import com.rays.bean.HotelBean;
+import com.rays.model.HotelModel;
+
+@WebServlet(name = "HotelCtl", urlPatterns = { "/ctl/HotelCtl" })
+public class HotelCtl extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String id = request.getParameter("id");
+
+		if (id != null && id.length() > 0) {
+
+			try {
+
+				HotelModel model = new HotelModel();
+
+				HotelBean bean = model.findByPK(Long.parseLong(id));
+
+				request.setAttribute("bean", bean);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		request.getRequestDispatcher("/jsp/Hotel.jsp").forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		HotelBean bean = new HotelBean();
+
+		bean.setHotelName(request.getParameter("hotelName"));
+		bean.setLocation(request.getParameter("location"));
+		bean.setRating(Double.parseDouble(request.getParameter("rating")));
+		bean.setContactNo(request.getParameter("contactNo"));
+
+		String id = request.getParameter("hotelId");
+
+		try {
+
+			HotelModel model = new HotelModel();
+
+			if (id == null || id.length() == 0) {
+
+				model.add(bean);
+
+			} else {
+
+				bean.setHotelId(Long.parseLong(id));
+
+				model.update(bean);
+			}
+
+			response.sendRedirect("HotelListCtl");
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;UseCase/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;UseCaseDemo&apos;&#x0D;&#x0A;- Destination element: &apos;UseCase/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     UseCaseDemo/src/com.rays.utility&#x0D;&#x0A;     UseCaseDemo/src/com.rays.model&#x0D;&#x0A;     UseCaseDemo/src/com.rays.bean&#x0D;&#x0A;     UseCaseDemo/src/com.rays.model.test" description="Copy packages" destination="=UseCase/src\/main\/java" element1="/src&lt;com.rays.utility" element2="/src&lt;com.rays.model" element3="/src&lt;com.rays.bean" element4="/src&lt;com.rays.model.test" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1782820654616" version="1.0"/>
+</session>
